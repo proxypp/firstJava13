@@ -24,9 +24,10 @@ public class BoardSerivceImpl implements BoardService { //5번째
 		BoardVO board;
 		String sql = "select * from board";
 		try {
-			conn = dataSource.getConnection();
-			psmt = conn.prepareStatement(sql);
-			rs = psmt.executeQuery();
+			conn = dataSource.getConnection();	//자바랑 developer를 연결시켜주는 메소드
+			psmt = conn.prepareStatement(sql); //SQL문을 넘겨주는 메소드
+			rs = psmt.executeQuery();	// sql 문을 실행해서 결과값을 출력해라.
+			
 			while(rs.next()) {
 				board = new BoardVO();
 				board.setBId(rs.getInt("bid"));

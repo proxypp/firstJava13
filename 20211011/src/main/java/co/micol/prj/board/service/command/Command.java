@@ -7,5 +7,5 @@ import co.micol.prj.mybatis.BoardMybatisService;
 public interface Command { // 8번째
 //	public BoardService dao = new BoardSerivceImpl();
 	public BoardService dao = new BoardMybatisService();
-	public void execute();
+	public void execute(); // 추상메소드
 }
